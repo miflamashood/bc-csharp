@@ -204,8 +204,8 @@ namespace Org.BouncyCastle.Pkcs
 
                 if (!Arrays.ConstantTimeAreEqual(mac, dig))
                 {
-                    if (password.Length > 0)
-                        throw new IOException("PKCS12 key store MAC invalid - wrong password or corrupted file.");
+                    //if (password.Length > 0)
+                    //    throw new IOException("PKCS12 key store MAC invalid - wrong password or corrupted file.");
 
                     // Try with incorrect zero length password
                     mac = CalculatePbeMac(algId.Algorithm, salt, itCount, password, true, data);
